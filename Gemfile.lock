@@ -91,6 +91,7 @@ GEM
     nokogiri (1.8.0-x64-mingw32)
       mini_portile2 (~> 2.2.0)
     pg (0.21.0-x64-mingw32)
+    popper_js (1.11.1)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -178,7 +179,11 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+<<<<<<< HEAD
   bootstrap-sass
+=======
+  bootstrap (~> 4.0.0.beta)
+>>>>>>> a6c954bd183156b0bcdd0ccbae0033f116f6172c
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
