@@ -1,0 +1,65 @@
+
+.center{
+    text-align: center;
+}
+.jumbotron{
+    background-image: asset_url('hong_kong_skyscrapers.jpg');
+    background-size: cover;
+    height: 550px;
+}
+.jumbotron h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.btn-xlarge{
+    font-size: 1.7em;
+    background-color: hsl(202, 98%, 16%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007dc5", endColorstr="#00304c");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#007dc5), to(#00304c));
+    background-image: -moz-linear-gradient(top, #007dc5, #00304c);
+    background-image: -ms-linear-gradient(top, #007dc5, #00304c);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #007dc5), color-stop(100%, #00304c));
+    background-image: -webkit-linear-gradient(top, #007dc5, #00304c);
+    background-image: -o-linear-gradient(top, #007dc5, #00304c);
+    background-image: linear-gradient(#007dc5, #00304c);
+    border-color: #00304c #00304c hsl(202, 99%, 9%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.39);
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s ease 0s;
+}
+.btn-xlarge:hover {
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #3071A9;
+    border-color: #285e8e;
+    transition: all 0.3s ease 0s;
+}
+
+footer{
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777
+}
+footer a:hover{
+    color: #222;
+}
+
+footer small{
+    float: left
+}
+footer ul{
+    float: right;
+    list-style: none;
+}
+footer ul li{
+    float: right;
+    margin-left: 15px;
+}
+
+@import "bootstrap";
+@import "navbar";
