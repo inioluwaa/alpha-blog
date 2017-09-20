@@ -34,6 +34,11 @@
     -webkit-font-smoothing: antialiased;
     transition: all 0.3s ease 0s;
 }
+
+.article-meta-details{
+    border-top: 1px solid #eaeaea;
+    margin-top: 15px;
+}
 .btn-xlarge:hover {
     color: #fff;
     box-shadow: inset 0 0 0 5px #3071A9;
