@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
       @article.user = User.first
       if @article.save
         flash[:success] = "Article was successful saved"
-        redirect_to article_path(@article)
+        redirect_to articles_path(@article)
       else
         render 'new'
       end
