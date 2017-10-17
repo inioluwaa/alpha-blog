@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 $background-navcolor:  #015584;
 
-
 .navbar {
-    background-color: $background-navcolor;
+  background-color: $background-navcolor;
+  font-family: 'Raleway', sans-serif;
 }
 #logo{
     float: left;
@@ -13,6 +14,7 @@ $background-navcolor:  #015584;
     letter-spacing: -1px;
     transition: all 0.5s ease 0s;
 }
+
 #logo:hover{
     color:grey;
     text-decoration: none;

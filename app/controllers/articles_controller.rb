@@ -1,54 +1,51 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :update, :show, :destroy]
-    def index
-      @articles = Article.all
+  before_action :set_article, only: %i[edit update show destroy]
+  def index
+    @articles = Article.all
+  end
+
+  def new
+    @article = Article.new
+  end
+
+  def edit; end
+
+  def create
+    debugger
+    @article = Article.new(article_params)
+    @article.user = User.first
+    if @article.save
+      flash[:success] = 'Article was successful saved'
+      redirect_to articles_path(@article)
+    else
+      render 'new'
     end
+  end
 
-    def new
-      @article = Article.new  
+  def update
+    if @article.update(article_params)
+      flash[:success] = 'Article was successful updated'
+      redirect_to article_path(@article)
+    else
+      render 'edit'
     end
+  end
 
-    def edit
+  def show; end
 
-    end
+  def destroy
+    @article.destroy
+    flash[:danger] = 'Article was successful deleted'
+    redirect_to articles_path
+  end
 
-    def create
-      debugger
-      @article = Article.new(article_params)
-      @article.user = User.first
-      if @article.save
-        flash[:success] = "Article was successful saved"
-        redirect_to articles_path(@article)
-      else
-        render 'new'
-      end
-    end
+  private
 
-    def update
-      if @article.update(article_params)
-        flash[:success] = "Article was successful updated"
-        redirect_to article_path(@article)
-      else
-        render 'edit'
-      end
-    end
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    def show
-
-    end
-
-    def destroy
-      @article.destroy
-      flash[:danger] = "Article was successful deleted"
-      redirect_to articles_path
-    end
-
-    private
-      def set_article
-        @article = Article.find(params[:id])
-      end
-      def article_params
-        params.require(:article).permit(:title, :description)
-      end
-
+  def article_params
+    params.require(:article).permit(:title, :description)
+  end
 end
